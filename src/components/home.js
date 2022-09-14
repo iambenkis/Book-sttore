@@ -39,13 +39,13 @@ const Home = () => (
             <div className="add-book">
                 <h2>Add new book</h2>
                 <form>
-                    <input type='text' placeHolder='Book title'/>
-                    <input type='text' placeHolder='Book title'/>
+                    <input type='text' className="book-title" placeHolder='Book title'/>
                     <div className="selector">
                         <select>
-                            <option value="0">All</option>
+                            <option value="0">Category</option>
                         </select>
                     </div>
+                    <button type="submit">Add book</button>
                 </form>
             </div>
         </div>

@@ -171,3 +171,45 @@ select {
   color: #fff;
   cursor: pointer;
 }
+
+.add-book {
+  width: 100%;
+}
+.add-book h2{
+  margin: 1rem 0;
+}
+
+.add-book form{
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.add-book input {
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+.add-book .book-title{
+  width: 60%;
+  padding: 1rem;
+  border: var(--border);
+  border-radius: 5px;
+}
+
+.add-book select {
+  width: 270px;
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+.add-book button{
+  width: 15%;
+  height: 3rem;
+  border: none;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  border-radius: 7px;
+  color: #fff;
+  text-transform: uppercase;
+}
