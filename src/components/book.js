@@ -1,11 +1,11 @@
-const Book = () => (
+const Book = (props) => (
   <div className="book-container">
     <div className="book">
       <div className="book-details">
         <div className="book-titles">
           <p className="category">Biography</p>
-          <h2>Book Title</h2>
-          <span>Autor</span>
+          <h2>{props.obj.title}</h2>
+          <span>{props.obj.author}</span>
         </div>
         <div className="book-action">
           <button type="button">Comments</button>
