@@ -9,7 +9,7 @@ const Home = () => (
           <option value="0">All</option>
         </select>
       </div>
-      <Book obj={{title : 'The Book',author :'Benamin Kisenge'}}/>
+      <Book obj={{ title: 'The Book', author: 'Benamin Kisenge' }} />
       <CreateBook />
     </div>
   </div>
