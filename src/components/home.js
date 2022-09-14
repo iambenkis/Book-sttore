@@ -1,7 +1,7 @@
 const Home = () => (
     <div className="home">
         <div className="container">
-            <div className="">
+            <div className="selector">
                 <select>
                     <option value="0">All</option>
                 </select>
@@ -12,7 +12,7 @@ const Home = () => (
                         <div className="book-titles">
                             <p className="category">Biography</p>
                             <h2>Book Title</h2>
-                            <p>Autor</p>
+                            <span>Autor</span>
                         </div>
                         <div className="book-action">
                             <button type="button">Comments</button>
@@ -25,7 +25,7 @@ const Home = () => (
                             <div className="graph"></div>
                             <div className="progress-data">
                                 <p>64%</p>
-                                <p>Completed</p>
+                                <span>Completed</span>
                             </div>
                         </div>
                         <div className="chapter-details">
@@ -35,6 +35,18 @@ const Home = () => (
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="add-book">
+                <h2>Add new book</h2>
+                <form>
+                    <input type='text' placeHolder='Book title'/>
+                    <input type='text' placeHolder='Book title'/>
+                    <div className="selector">
+                        <select>
+                            <option value="0">All</option>
+                        </select>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

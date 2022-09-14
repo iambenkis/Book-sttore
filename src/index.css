@@ -13,6 +13,7 @@
   --animation-duration: 2s;
   --loader-initial-scale: 0.1;
   --warm-grey: #888;
+  --vert-line :1px solid #e2e2e2;
 }
 
 * {
@@ -33,6 +34,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #efefef;
 }
 
 code {
@@ -45,5 +47,127 @@ code {
 }
 
 path {
+  cursor: pointer;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.book-container {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #cccccc;
+}
+
+select {
+  width: 30%;
+  height: 2.5rem;
+  border: var(--border);
+  margin: 1rem 0;
+  outline: none;
+  padding: .5rem;
+  background-color: #fff;
+}
+.book {
+  display: flex;
+  justify-content: space-between;
+  border: var(--border);
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.book-titles p {
+  font-weight: 600;
+  color: var(--warm-grey);
+}
+
+.book-titles span {
+  color: var(--primary-color);
+}
+
+.book-titles{
+  margin-bottom: 1rem;
+}
+
+
+.book-action button{
+  border: none;
+  color: var(--primary-color);
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.book-action button:nth-child(2) {
+  margin: 0 1rem;
+  padding: 0 1rem;
+  border-right: var(--vert-line);
+  border-left: var(--vert-line);
+}
+
+.book-progress {
+  display: flex;
+  align-items: center;
+}
+
+.progress-info {
+  display: flex;
+  padding-right: 5rem;
+  border-right: var(--vert-line);
+}
+
+.graph {
+    border-color: var(--loader-color-secondary,#fff) var(--loader-color-primary,#00f) var(--loader-color-primary,#00f) var(--loader-color-secondary,#fff);
+    border-style: solid;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border-width: 6px;
+    margin-right: 1.5rem;
+}
+
+.progress-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progress-info p{
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.progress-info span {
+  font-weight: 100;
+}
+
+.chapter-details {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5rem;
+}
+
+.chapter-details p{
+  font-weight: 100;
+}
+
+.chapter-details span{
+  margin: 1rem 0;
+}
+
+.chapter-details button {
+  border: none;
+  background-color: var(--primary-color);
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  color: #fff;
   cursor: pointer;
 }
