@@ -42,7 +42,12 @@ code {
     monospace;
 }
 
-.navbar li:hover{
+.navbar a{
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar li a:hover{
   color: var(--primary-color);
 }
 
