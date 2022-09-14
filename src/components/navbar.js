@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom';
 import { FaUserCircle } from "react-icons/fa";
+
 const NavBar = () => {
     return (
         <div className="navbar" style={{
@@ -24,10 +26,14 @@ const NavBar = () => {
             alignItems:'center',
             marginLeft:'5rem'
         }}>
-                <li>BOOKS</li>
+                <li>
+                    <Link to='/'>BOOK</Link>
+                </li>
                 <li style={{
                     marginLeft: '1rem'
-                }}>CATEGORIES</li>
+                }}>
+                    <Link to='/category'>CATEGORIES</Link>
+                </li>
             </ul>
         </div>
         <FaUserCircle style={{
