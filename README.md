@@ -1,62 +1,47 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Bookstore
 
-> Description the project.
+> This is a front-end of an application that will help organize and manage bookstore. It is so fast, dynamic and responsive to actions and it is built with React & Redux.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- React
+- JavaScript
+- CSS
+- JSX
 
 ## Live Demo (if available)
 
 [Live Demo Link](https://livedemo.com)
 
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
+### Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+- Clone the project unto your local machine using the link below
+```bash
+https://github.com/iambenkis/Bookstore-App.git
+```
+- Open the project with your code editor
+- Run `npm install` to install all the dependencies
+- Run `npm start` to start the server
+- Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Authors
 
-👤 **Author1**
+👤 **Benjamin Kisenge (Me)**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+* GitHub: [@benjamin kisenge](https://github.com/iambenkis)
+* Twitter: [@benjamin kisenge](https://twitter.com/iambenkis)
+* LinkedIn: [benjamin kisenge](https://www.linkedin.com/in/ben-kisenge/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/iambenkis/Bookstore-App/issues).
 
 ## Show your support
 
@@ -64,12 +49,11 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse
+- Usman Suleiman Babakolo (Micronaut)
 
 ## 📝 License
 
-This project is [MIT](./LICENSE) licensed.
+The MIT License (MIT)
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+Copyright (c) 2022
