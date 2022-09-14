@@ -203,7 +203,8 @@ select {
   margin-right: 1rem;
 }
 
-.add-book button{
+.add-book button,
+.status{
   width: 15%;
   height: 3rem;
   border: none;
@@ -212,4 +213,10 @@ select {
   border-radius: 7px;
   color: #fff;
   text-transform: uppercase;
+}
+
+.status {
+  margin-top: 2rem;
+  margin-left: 2rem;
+
 }
