@@ -1,12 +1,13 @@
 import React from 'react';
+import { removeBook } from '../redux/books/books';
 
 const Book = (props) => {
   const { obj } = props;
   return (
     <div className="book-container">
     {
-      obj.map((o) => (
-      <div className="book">
+      obj.map((o, id) => (
+      <div className="book" key={id}>
         <div className="book-details">
           <div className="book-titles">
             <p className="category">Biography</p>
@@ -15,7 +16,9 @@ const Book = (props) => {
           </div>
           <div className="book-action">
             <button type="button">Comments</button>
-            <button type="button" onClick={() => console.log(props)}>Remove</button>
+            <button type="button" onClick={() =>{
+              console.log(removeBook)
+            }}>Remove</button>
             <button type="button">Edit</button>
           </div>
         </div>
@@ -34,7 +37,8 @@ const Book = (props) => {
           </div>
         </div>
       </div>
-    ))}
+    ))
+    }
     </div>
   );
 };
