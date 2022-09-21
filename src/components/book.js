@@ -2,19 +2,20 @@ import React from 'react';
 
 const Book = (props) => {
   const { obj } = props;
-  const { title, author } = obj;
   return (
     <div className="book-container">
+    {
+      obj.map((o) => (
       <div className="book">
         <div className="book-details">
           <div className="book-titles">
             <p className="category">Biography</p>
-            <h2>{title}</h2>
-            <span>{author}</span>
+            <h2>{o.title}</h2>
+            <span>{o.author}</span>
           </div>
           <div className="book-action">
             <button type="button">Comments</button>
-            <button type="button">Remove</button>
+            <button type="button" onClick={() => console.log(props)}>Remove</button>
             <button type="button">Edit</button>
           </div>
         </div>
@@ -33,6 +34,7 @@ const Book = (props) => {
           </div>
         </div>
       </div>
+    ))}
     </div>
   );
 };
