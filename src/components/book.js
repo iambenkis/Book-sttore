@@ -1,15 +1,12 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { removeBook } from "../redux/books/books";
 
 const Book = (props) => {
   const { obj } = props;
   const dispatch = useDispatch();
-  const myStore = useSelector((state) => state.bookReducer);
   const deleteBook = (e) => {
     e.preventDefault();
-    console.log(dispatch(removeBook(e.target.id)))
-    console.log(myStore)
     dispatch(removeBook(parseInt(e.target.id)))
   };
   return (
