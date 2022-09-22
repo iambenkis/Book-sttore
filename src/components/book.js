@@ -16,7 +16,7 @@ const Book = (props) => {
           <div className="book-action">
             <button type="button">Comments</button>
             <button type="button" onClick={() =>{
-              console.log("hello")
+              console.log("Deleted")
             }}>Remove</button>
             <button type="button">Edit</button>
           </div>
