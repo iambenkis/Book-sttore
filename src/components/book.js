@@ -1,11 +1,7 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { removeBook } from '../redux/books/books';
 
 const Book = (props) => {
   const { obj } = props;
-  const state = useSelector(state => state);
-  console.log(state)
   return (
     <div className="book-container">
     {
@@ -20,7 +16,7 @@ const Book = (props) => {
           <div className="book-action">
             <button type="button">Comments</button>
             <button type="button" onClick={() =>{
-              console.log(removeBook)
+              console.log("hello")
             }}>Remove</button>
             <button type="button">Edit</button>
           </div>
