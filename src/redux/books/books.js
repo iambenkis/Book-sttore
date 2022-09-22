@@ -8,7 +8,7 @@ export const addBook = (book) => ({
   payload: book,
 });
 
-const bookReducer = (state = [], action) => {
+const bookReducer = (state = [{ id: 3, title: 'The Book', author: 'Benamin Kisenge' }], action) => {
   switch (action.type) {
     case 'REMOVE_BOOK':
       return [...state.books.filter((book) => book.id !== action.payload)];

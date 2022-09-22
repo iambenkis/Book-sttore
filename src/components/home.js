@@ -15,7 +15,7 @@ const Home = () => (
           <option value="0">All</option>
         </select>
       </div>
-      <Book obj={books} />
+      <Book />
       <CreateBook />
     </div>
   </div>
