@@ -1,6 +1,6 @@
 // import { configureStore } from "@reduxjs/toolkit";
 
-const rootReducer = (state = [], action) => {
+const bookReducer = (state = [], action) => {
     switch (action.type) {
         case 'REMOVE_BOOK':
             return state.filter(book => book.index !== action.index)
@@ -16,4 +16,4 @@ const rootReducer = (state = [], action) => {
     }
 }
 
-export default rootReducer;
+export default bookReducer;

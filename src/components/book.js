@@ -1,8 +1,11 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { removeBook } from '../redux/books/books';
 
 const Book = (props) => {
   const { obj } = props;
+  const state = useSelector(state => state);
+  console.log(state)
   return (
     <div className="book-container">
     {
