@@ -1,12 +1,19 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/books';
 
 const Book = (props) => {
   const { obj } = props;
+  const dispatch = useDispatch();
+  const deleteBook = (e) => {
+    e.preventDefault();
+    dispatch(removeBook(parseInt(e.target.id, 10)));
+  };
   return (
     <div className="book-container">
       {
       obj.map((o) => (
-        <div className="book" key={obj.id}>
+        <div className="book" key={o.id}>
           <div className="book-details">
             <div className="book-titles">
               <p className="category">Biography</p>
@@ -17,6 +24,8 @@ const Book = (props) => {
               <button type="button">Comments</button>
               <button
                 type="button"
+                onClick={deleteBook}
+                id={o.id}
               >
                 Remove
               </button>
