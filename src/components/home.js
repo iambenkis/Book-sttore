@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import Book from './book';
 import CreateBook from './createNewBook';
-import ReactText from './Text'
+// import ReactText from './Text'
 
 const Home = () => {
   const myStore = useSelector((state) => state.bookReducer);
@@ -15,7 +15,7 @@ const Home = () => {
       </div>
       <Book obj={myStore} />
       <CreateBook />
-      <ReactText />
+      {/* <ReactText /> */}
     </div>
   </div>
 )};
