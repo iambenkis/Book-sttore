@@ -14,9 +14,7 @@ export const addBook = () => {
 }
 
 
-export default bookReducer = (state = {
-
-}, action) => {
+export const bookReducer = (state = [], action) => {
     switch (action.type) {
         case 'REMOVE_BOOK':
             return state.filter(book => book.index !== action.index)
