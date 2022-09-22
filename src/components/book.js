@@ -1,13 +1,13 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { removeBook } from "../redux/books/books";
+import { removeBook } from '../redux/books/books';
 
 const Book = (props) => {
   const { obj } = props;
   const dispatch = useDispatch();
   const deleteBook = (e) => {
     e.preventDefault();
-    dispatch(removeBook(parseInt(e.target.id)))
+    dispatch(removeBook(parseInt(e.target.id, 10)));
   };
   return (
     <div className="book-container">
