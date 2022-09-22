@@ -1,7 +1,7 @@
-export const removeBook = (book) => {
+export const removeBook = (index) => {
     return {
         type : 'REMOVE',
-        book
+        index
     }
 }
 
@@ -13,20 +13,12 @@ export const addBook = (book) => {
 }
 
 
-export default function bookReducer  (state = {
-    books: []
-}, action) {
+export default function bookReducer  (state =[], action) {
     switch (action.type) {
         case 'REMOVE_BOOK':
-            return {
-                ...state,
-                books : state.books.filter(book => book !== action.book)
-            }
+            return   [...state.books.filter(book => book.id !== action.id)]
         case 'ADD_BOOK':
-            return {
-                ...state,
-                books : [...state.books, action.book]
-            }
+            return [...state.books, action.book]
         default :
             return state
     }
