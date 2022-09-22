@@ -1,6 +1,12 @@
 import Book from './book';
 import CreateBook from './createNewBook';
 
+const books = [
+  { id: 0, title: 'The Book', author: 'Benamin Kisenge' },
+  { id: 1, title: 'The Book', author: 'Benamin Kisenge' },
+  { id: 2, title: 'The Book', author: 'Benamin Kisenge' },
+  { id: 3, title: 'The Book', author: 'Benamin Kisenge' },
+];
 const Home = () => (
   <div className="home">
     <div className="container">
@@ -9,7 +15,7 @@ const Home = () => (
           <option value="0">All</option>
         </select>
       </div>
-      <Book obj={{ title: 'The Book', author: 'Benamin Kisenge' }} />
+      <Book obj={books} />
       <CreateBook />
     </div>
   </div>

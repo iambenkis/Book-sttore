@@ -103,6 +103,7 @@ select {
   border: var(--border);
   padding: 2rem;
   background-color: #fff;
+  margin-bottom: 2rem;
 }
 
 .book-titles p {
