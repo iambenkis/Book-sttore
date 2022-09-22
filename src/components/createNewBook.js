@@ -9,7 +9,7 @@ const CreateBook = () => {
     title :'',
     author : ''
   });
-  const read = (e) => {
+  const readInput = (e) => {
     const m = e.target;
     setState({
       ...state,
@@ -18,7 +18,6 @@ const CreateBook = () => {
   };
   const submit = (e) => {
     e.preventDefault();
-    const { m } = e.target;
     if (state.title && state.author) {
       dispatch(
         addBook({
@@ -26,17 +25,14 @@ const CreateBook = () => {
           author : state.author,
           id : myStore.length + 1
     }))
-
-
   }
-
-  }
+}
   return (
   <div className="add-book">
     <h2>Add new book</h2>
     <form onSubmit={submit}>
-      <input type="text" className="book-title" name='title' placeholder="Book title"  value={state.title} onChange={read}/>
-      <input type="text" className="book-author" name='author' placeholder="Book Author" value={state.author} onChange={read}/>
+      <input type="text" className="book-title" name='title' placeholder="Book title"  value={state.title} onChange={readInput}/>
+      <input type="text" className="book-author" name='author' placeholder="Book Author" value={state.author} onChange={readInput}/>
       <button type="submit">Add book</button>
     </form>
   </div>
