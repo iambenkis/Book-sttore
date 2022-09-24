@@ -19,33 +19,25 @@ export const read = (books) => ({
   payload: books,
 });
 
-
-const thunkBook = () => () =>
-  axios.get('./api/auh/me')
-  .then(res => res.data)
-  .then(books => {
-    store.dispatch(simpleBook(simpleBook(books)))
-  })
-
-const initialState = [{
-  id: 1,
-  title: 'Benjamin biography',
-  author: 'Benkis',
-},
-{
-  id: 2,
-  title: 'L ame du monde',
-  author: 'Frederic francois',
-},
+const initialState = [
+//   id: 1,
+//   title: 'Benjamin biography',
+//   author: 'Benkis',
+// },
+// {
+//   id: 2,
+//   title: 'L ame du monde',
+//   author: 'Frederic francois',
+// },
 ];
 
 const bookReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'REMOVE_BOOK':
+    case 'REMOVE_BOOK/fulfilled':
       return [...state.filter((book) => book.id !== action.payload)];
-    case 'ADD_BOOK':
+    case 'ADD_BOOK/fulfilled':
       return [...state, action.payload];
-    case 'READ_BOOK':
+    case 'READ_BOOK/fulfilled':
         return action.payload;
     default:
       return state;

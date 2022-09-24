@@ -1,10 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useState } from 'react';
 import { addBook } from '../redux/books/books';
+import { sendBook } from '../redux/books/books';
 
 const CreateBook = () => {
   const dispatch = useDispatch();
-  const myStore = useSelector((state) => state.bookReducer);
+  // const myStore = useSelector((state) => state.bookReducer);
   const [state, setState] = useState({
     title: '',
     author: '',

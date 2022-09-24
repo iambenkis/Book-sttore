@@ -1,24 +1,28 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch} from "react-redux";
 import Book from './book';
 import CreateBook from './createNewBook';
-// import ReactText from './Text'
+import { recieveBooks } from "../redux/books/books";
+import { useEffect } from "react";
 
 const Home = () => {
-  const myStore = useSelector((state) => state.bookReducer);
+  let myStore = useSelector((state) => state.books);
+  const dispatch = useDispatch();
+  useEffect(() => {
+     dispatch(recieveBooks());
+  }, []);
   return (
-    <div className="home">
-      <div className="container">
-        <div className="selector">
-          <select>
-            <option value="0">All</option>
-          </select>
-        </div>
-        <Book obj={myStore} />
-        <CreateBook />
-        {/* <ReactText /> */}
+  <div className="home">
+    <div className="container">
+      <div className="selector">
+        <select>
+          <option value="0">All</option>
+        </select>
       </div>
+      <Book obj={myStore} />
+      <CreateBook />
+      {/* <ReactText /> */}
     </div>
-  );
-};
+  </div>
+)};
 
 export default Home;
