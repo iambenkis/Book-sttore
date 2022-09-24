@@ -83,7 +83,7 @@ path {
 }
 
 .book-container {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid #ccc;
 }
 
@@ -103,7 +103,7 @@ select {
   border: var(--border);
   padding: 2rem;
   background-color: #fff;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .book-titles p {
