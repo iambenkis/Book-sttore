@@ -16,7 +16,7 @@ const Book = (props) => {
         <div className="book" key={o.id}>
           <div className="book-details">
             <div className="book-titles">
-              <p className="category">Biography</p>
+              <p className="category">{o.category}</p>
               <h2>{o.title}</h2>
               <span>{o.author}</span>
             </div>
