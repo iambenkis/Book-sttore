@@ -2,8 +2,9 @@
 
 # Bookstore
 
-> This is a front-end of an application that will help organize and manage bookstore. It is so fast, dynamic and responsive to actions and it is built with React & Redux.
+> This is a front-end of an application that will help organize and manage bookstore. It is so fast, dynamic and responsive to actions and it is built with React & Redux including an API.
 
+![BookStore](./img.png)
 
 ## Built With
 
