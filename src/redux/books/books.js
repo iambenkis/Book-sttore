@@ -1,10 +1,11 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import store from "../configureStore";
+import axios from 'axios';
 
-const APIURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/1fOnn2C5yMKtspS4K1tx/books';
+const APIURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/Mj3Ye2YTIzSedTXh3Lfo/books';
 
 export const removeBook = (index) => ({
-  type: 'REMOVE',
+  type: 'REMOVE_BOOK',
   payload: index,
 });
 
@@ -40,7 +41,7 @@ const initialState = [{
 
 const bookReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'REMOVE':
+    case 'REMOVE_BOOK':
       return [...state.filter((book) => book.id !== action.payload)];
     case 'ADD_BOOK':
       return [...state, action.payload];
@@ -51,7 +52,7 @@ const bookReducer = (state = initialState, action) => {
   }
 };
 
-export const recieveBooks = createAsyncThunk(READ,
+export const recieveBooks = createAsyncThunk('READ_BOOK',
   async () => {
     const res = await axios.get(APIURL);
     const books = Object.keys(res.data).map((id) => ({
@@ -61,13 +62,13 @@ export const recieveBooks = createAsyncThunk(READ,
     return books;
   });
 
-export const sendBook = createAsyncThunk(ADD,
+export const sendBook = createAsyncThunk('ADD_BOOK',
   async (book) => {
     await axios.post(APIURL, book);
     return book;
   });
 
-export const deleteBook = createAsyncThunk(REMOVE,
+export const deleteBook = createAsyncThunk('REMOVE_BOOK',
   async (id) => {
     await axios.delete(`${APIURL}/${id}`);
     return id;
