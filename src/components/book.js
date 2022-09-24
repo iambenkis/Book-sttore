@@ -7,7 +7,6 @@ const Book = (props) => {
   const removeBook = (e) => {
     e.preventDefault();
     dispatch(deleteBook(e.target.id));
-    console.log("Props ",props)
   };
   const { obj } = props;
   return (

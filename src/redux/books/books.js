@@ -1,5 +1,4 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-// import store from "../configureStore";
 import axios from 'axios';
 
 const APIURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/Mj3Ye2YTIzSedTXh3Lfo/books';
@@ -19,17 +18,7 @@ export const read = (books) => ({
   payload: books,
 });
 
-const initialState = [
-//   id: 1,
-//   title: 'Benjamin biography',
-//   author: 'Benkis',
-// },
-// {
-//   id: 2,
-//   title: 'L ame du monde',
-//   author: 'Frederic francois',
-// },
-];
+const initialState = [];
 
 const bookReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -63,7 +52,6 @@ export const sendBook = createAsyncThunk('ADD_BOOK',
 export const deleteBook = createAsyncThunk('REMOVE_BOOK',
   async (id) => {
     await axios.delete(`${APIURL}/${id}`);
-    console.log(id)
     return id;
   });
 
