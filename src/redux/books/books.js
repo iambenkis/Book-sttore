@@ -1,3 +1,5 @@
+import store from "../configureStore";
+
 export const removeBook = (index) => ({
   type: 'REMOVE',
   payload: index,
@@ -7,6 +9,15 @@ export const addBook = (book) => ({
   type: 'ADD_BOOK',
   payload: book,
 });
+
+const simpleBook = books => ({type: 'LOGIN',books})
+
+const thunkBook = () => () =>
+  axios.get('./api/auh/me')
+  .then(res => res.data)
+  .then(books => {
+    store.dispatch(simpleBook(simpleBook(books)))
+  })
 
 const initialState = [{
   id: 1,
