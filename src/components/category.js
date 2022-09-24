@@ -4,7 +4,7 @@ import { check } from '../redux/categories/categories';
 
 const Category = () => {
   const dispatch = useDispatch();
-  const status = useSelector((s) => s.categoryReducer);
+  const status = useSelector((s) => s.category);
   const checkStatus = (e) => {
     e.preventDefault();
     dispatch(check());

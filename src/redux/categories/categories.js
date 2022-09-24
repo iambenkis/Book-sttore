@@ -1,9 +1,9 @@
 export const check = () => ({
-  type: 'BOOK_STATUS',
+  type: '@@redux/INIT1.f.c.c.l.f',
 });
 
 const categoryReducer = (state = [], action) => {
-  if (action.type === 'BOOK_STATUS') {
+  if (action.type === '@@redux/INIT1.f.c.c.l.f') {
     return 'UNDER CONSTRUCTION';
   }
   return state;

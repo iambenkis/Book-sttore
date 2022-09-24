@@ -50,7 +50,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Microverse
-- Usman Suleiman Babakolo (Micronaut)
+-  Zeplin
 
 ## 📝 License
 

@@ -1,10 +1,10 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import React, { useState } from 'react';
-import { addBook } from '../redux/books/books';
+import uniqid from 'uniqid';
+import { sendBook } from '../redux/books/books';
 
 const CreateBook = () => {
   const dispatch = useDispatch();
-  const myStore = useSelector((state) => state.bookReducer);
   const [state, setState] = useState({
     title: '',
     author: '',
@@ -19,13 +19,14 @@ const CreateBook = () => {
   const submit = (e) => {
     e.preventDefault();
     if (state.title && state.author) {
-      dispatch(
-        addBook({
-          title: state.title,
-          author: state.author,
-          id: myStore.length + 1,
-        }),
-      );
+      const book = {
+        title: state.title,
+        author: state.author,
+        item_id: uniqid(),
+        category: state.category,
+      };
+      e.target.reset();
+      dispatch(sendBook(book));
     }
   };
   return (
@@ -34,6 +35,7 @@ const CreateBook = () => {
       <form onSubmit={submit}>
         <input type="text" className="book-title" name="title" placeholder="Book title" value={state.title} onChange={readInput} />
         <input type="text" className="book-author" name="author" placeholder="Book Author" value={state.author} onChange={readInput} />
+        <input type="text" className="category" placeholder="Category" name="category" value={state.category} onChange={readInput} />
         <button type="submit">Add book</button>
       </form>
     </div>

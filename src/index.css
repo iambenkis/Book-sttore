@@ -238,6 +238,13 @@ select {
   border-radius: 5px;
 }
 
+.add-book .category {
+  width: 30%;
+  padding: 1rem;
+  border: var(--border);
+  border-radius: 5px;
+}
+
 .add-book select {
   width: 270px;
   height: 3rem;
