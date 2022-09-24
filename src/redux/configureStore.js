@@ -5,13 +5,13 @@ import bookReducer from './books/books';
 import categoryReducer from './categories/categories';
 
 const rootStore = combineReducers({
-  books : bookReducer,
-  category : categoryReducer,
+  books: bookReducer,
+  category: categoryReducer,
 });
 
 const store = configureStore({
   reducer: rootStore,
-  thunk : applyMiddleware(thunk)
+  thunk: applyMiddleware(thunk),
 });
 
 export default store;

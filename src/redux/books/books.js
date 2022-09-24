@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import store from "../configureStore";
+// import store from "../configureStore";
 import axios from 'axios';
 
 const APIURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/Mj3Ye2YTIzSedTXh3Lfo/books';
@@ -38,7 +38,7 @@ const bookReducer = (state = initialState, action) => {
     case 'ADD_BOOK/fulfilled':
       return [...state, action.payload];
     case 'READ_BOOK/fulfilled':
-        return action.payload;
+      return action.payload;
     default:
       return state;
   }
