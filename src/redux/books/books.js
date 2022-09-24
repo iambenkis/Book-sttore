@@ -34,7 +34,7 @@ const initialState = [
 const bookReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'REMOVE_BOOK/fulfilled':
-      return [...state.filter((book) => book.id !== action.payload)];
+      return [...state.filter((book) => book.item_id !== action.payload)];
     case 'ADD_BOOK/fulfilled':
       return [...state, action.payload];
     case 'READ_BOOK/fulfilled':
@@ -63,6 +63,7 @@ export const sendBook = createAsyncThunk('ADD_BOOK',
 export const deleteBook = createAsyncThunk('REMOVE_BOOK',
   async (id) => {
     await axios.delete(`${APIURL}/${id}`);
+    console.log(id)
     return id;
   });
 
