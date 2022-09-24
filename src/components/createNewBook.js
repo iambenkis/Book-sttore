@@ -26,7 +26,10 @@ const CreateBook = () => {
           item_id: uniqid(),
           category : state.category,
         };
+        e.target.reset();
+      dispatch(sendBook(book));
     }
+
   };
   return (
     <div className="add-book">
